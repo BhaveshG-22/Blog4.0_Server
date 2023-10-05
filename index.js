@@ -1,11 +1,13 @@
+// index.js
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 3000;
-
+const PORT = 4001;
 app.get("/", (req, res) => {
-  res.send("Hello, World!");
+  res.status(200).json("Welcome, your app is working well");
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Server running at ${PORT}`);
 });
+
+module.exports = app;
